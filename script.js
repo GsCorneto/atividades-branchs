@@ -34,7 +34,7 @@ const addTask = () => {
 const deleteTask = (index) => {
     tasks.splice(index, 1);
     renderTasks();
-}
+};
 
 addTaskButton.addEventListener('click', addTask)
 
