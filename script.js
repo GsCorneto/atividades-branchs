@@ -1,3 +1,5 @@
+const taskInput = document.getElementById("atv-input");
+const addTaskButton = document.getElementById("atv-add")
 const searchInput = document.getElementById("atv-busca");
 const taskList = document.getElementById('atv-lista');
 
@@ -19,6 +21,17 @@ const renderTasks = (filter = '') => {
             taskList.appendChild(li);
           })
 };
+
+const addTask = () => {
+    const taskText = taskInput.ariaValueMax.trim();
+    if (taskText){
+        tasks.push({ text: taskText, completed: false});
+        taskInput.value = '';
+        renderTasks();
+    }
+};
+
+addTaskButton.addEventListener('click', addTask)
 
 const searchAtv = () => {
     const filter = searchInput.ariaValueMax.trim();
