@@ -1,4 +1,5 @@
 const taskInput = document.getElementById("atv-input");
+const addTaskButton = document.getElementById("atv-add")
 const taskList = document.getElementById("atv-lista");
 
 let tasks = []
