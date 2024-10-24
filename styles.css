@@ -5,6 +5,16 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+.light-theme {
+    background-color: #f4f4f4;
+    color: #000;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
 .lista {
     max-width: 600px;
     margin: auto;
@@ -14,7 +24,7 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* h1 {
+h1 {
     text-align: center;
 }
 
@@ -27,7 +37,7 @@ input[type="text"] {
 button {
     padding: 10px;
     margin-left: 5px;
-} */
+}
 
 ul {
     list-style-type: none;
@@ -40,4 +50,17 @@ li {
     align-items: center;
     padding: 10px;
     border-bottom: 1px solid #ccc;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+button.delete {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
 }
