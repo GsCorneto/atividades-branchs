@@ -1,4 +1,4 @@
-
+=======
 const taskInput = document.getElementById("atv-input");
 const addTaskButton = document.getElementById("atv-add")
 const searchInput = document.getElementById("atv-busca");
@@ -39,6 +39,11 @@ const addTask = () => {
     }
 };
 
+const toggleTask = (index) =>{
+    tasks[index].completed = !tasks[index].completed;
+    renderTasks();
+}
+
 const deleteTask = (index) => {
     tasks.splice(index, 1);
     renderTasks();
@@ -61,4 +66,5 @@ themeToggleButton.addEventListener('click', () =>{
     }
 })
 addTaskButton.addEventListener('click', addTask)
+searchInput.addEventListener('input', searchTasks)
 
